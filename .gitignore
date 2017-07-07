@@ -1,5 +1,3 @@
-node_modules/
-server/node_modules/
 generated/
 server/public/upload/*
 !server/public/upload/.keep
@@ -14,3 +12,4 @@ ehthumbs.db
 Thumbs.db
 node_modules/
 public/
+dist/
