@@ -182,6 +182,7 @@ angular.module('app')
                 handler: $scope.user._id,
             }).then(function(res) {
                 SDFService.getMySDF($scope.user._id).then(function(res) {
+                  location.reload();
                     $scope.sallesDesFetes = res.data;
                 });
             });
