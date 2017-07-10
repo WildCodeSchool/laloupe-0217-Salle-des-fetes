@@ -21,6 +21,7 @@ app.use(bodyParser.json({
 }));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static('../dist/'));
+app.use(express.static('./public/'));
 db(() => {
     app.use('/', api(app));
     process.on('SIGINT', () => {

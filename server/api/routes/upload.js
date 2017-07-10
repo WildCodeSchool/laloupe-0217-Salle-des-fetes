@@ -12,8 +12,6 @@ module.exports = (app) => {
 
     router.get("/send", img.getAll);
 
-    app.use('/static/img', express.static('../public/upload'));
-
     app.use('/img', router);
 
 };
