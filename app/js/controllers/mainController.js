@@ -1,5 +1,9 @@
 angular.module('app')
-  .controller('MainController', function($scope, CurrentUser, UserService, SDFService, NgMap, $state) {
+  .controller('MainController', function($scope, CurrentUser, UserService, SDFService, NgMap, $state, Auth) {
+
+    if(Auth.isAuthenticated()){
+      $state.go('user.home');
+    }
 
     var arrayTrueSDF = [],
       sdfAll = [],

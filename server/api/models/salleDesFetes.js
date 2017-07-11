@@ -101,7 +101,6 @@ function filterSalles(salles, array, ville, capacity, callback) {
 
 export default class SDF {
   updateImg(req, res) {
-    console.log('body', req.body);
     model.findByIdAndUpdate(
       req.params.id, {
         $push: {
@@ -150,8 +149,6 @@ export default class SDF {
   }
 
   findResult(req, res) {
-    console.log("YOHO ET UNE BOUTEILLE DE SKY");
-
     model.find({})
       .populate('evenement')
       .exec((err, sallesDesFetes) => {
@@ -195,7 +192,6 @@ export default class SDF {
   }
 
   getImg(req, res) {
-    console.log('body', req.body);
     model.findByIdAndUpdate({
         _id: req.params.image
       }, req.body, {
@@ -235,8 +231,6 @@ export default class SDF {
               upsert: true,
               new: true
             }, (err, salleDesFetes) => {
-              console.log("JE SUIS DANS L UPDATE");
-              console.log(coordo);
               if (err || !salleDesFetes) {
                 res.status(500).send(err.message);
               } else {
@@ -251,7 +245,6 @@ export default class SDF {
     );
   }
   update(req, res) {
-    console.log('body', req.body);
     model.findByIdAndUpdate({
         _id: req.params.id
       }, {

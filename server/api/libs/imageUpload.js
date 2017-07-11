@@ -27,7 +27,6 @@ export default class Image {
             if (err) {
                 res.status(500).send(err.message);
             } else {
-                console.log(req)
                 res.json({
                     success: true,
                     filename: req.file.filename
@@ -39,11 +38,9 @@ export default class Image {
     getAll(req, res) {
         dir.files(imageDir, function(err, files) {
             if (err) throw err;
-            console.log(files);
             let fileNames = files.map((file) => {
                 return { fileName: file };
             });
-            console.log(fileNames);
             res.json(fileNames);
         });
     }

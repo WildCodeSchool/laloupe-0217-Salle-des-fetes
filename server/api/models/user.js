@@ -177,8 +177,6 @@ export default class User {
         }
     }
     likesdfUpdate(req, res) {
-        console.log("body", req.body);
-        console.log("params", req.params);
         model.findByIdAndUpdate(
             req.params.id, { $addToSet: { liked: req.body.sdf } }, { safe: true, upsert: true, new: true },
             (err, user) => {
@@ -200,7 +198,6 @@ export default class User {
     }
 
     delFav(req, res) {
-        console.log('body', req.body._id, 'params', req.params);
         model.findByIdAndUpdate(req.params.id, {
                 $pull: {
                     liked: req.body._id

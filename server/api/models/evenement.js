@@ -37,22 +37,18 @@ export default class Event {
     }
 
     create(req, res) {
-        console.log('body create event', req.body);
         model.create(req.body,
             (err, evenement) => {
                 if (err || !evenement) {
                     console.log(err);
                     res.status(500).send(err.message);
                 } else {
-                  console.log(evenement,'ici');
                     res.json(evenement);
                 }
             });
     }
 
     update(req, res) {
-        console.log('body', req.body);
-
         model.findByIdAndUpdate({
             _id: req.params.id
         }, req.body, (err, evenement) => {
