@@ -98,24 +98,24 @@
                     <div class="input-field col s6">
                       <h5><b>Surface de la salle : </b>{{salleDesFetes.surface}}</h5>
                     </div>
-                    <div class="input-field col s12">
-                      <h5><b>Description de la salle : </b>{{salleDesFetes.text}}</h5>
+                    <div class="input-field col offset-s1 s4">
+                      <h5><b>Adresse : </b>{{salleDesFetes.adress}}</h5>
                     </div>
-                    <div class="input-field col s6">
-                      <h5><b>Ville : </b>{{salleDesFetes.city}}</h5>
-                    </div>
-                    <div class="input-field col s6">
+                    <div class="input-field col s2">
                       <h5><b>Code postal : </b>{{salleDesFetes.postalCode}}</h5>
                     </div>
-                    <div class="input-field col s6">
-                      <h5><b>Adresse : </b>{{salleDesFetes.adress}}</h5>
+                    <div class="input-field col s4">
+                      <h5><b>Ville : </b>{{salleDesFetes.city}}</h5>
+                    </div>
+                    <div class="input-field col s12">
+                      <h5><b>Description de la salle : </b>{{salleDesFetes.text}}</h5>
                     </div>
                     <div class="input-field col s12 centerBtnFooter" ng-hide="editSDF[$index]">
                       <button type="button" class="waves-effect centerBtn light-green btn" ng-click="editSDF($index)">Modifier les informations</button>
                     </div>
                   </div>
                   <ng-show ng-show="editSDF[$index]">
-                    <div class="marginPageSalle">                      
+                    <div class="marginPageSalle">
                       <h5 class="light-green-text">Informations relatives à la salle:</h5>
                       <br/>
                       <div class="input-field col s6">
